@@ -6,6 +6,7 @@ module.exports = {
 };
 
 function succeed(item) {
+
   return { ...item };
 }
 
@@ -14,8 +15,12 @@ function fail(item) {
 }
 
 function repair(item) {
-  console.log(item)
-  return { ...item };
+  //what is this functions job?
+  console.log('item in repair--->', item)
+  console.log('item.durability: ', item.durability)
+  return {...item, durability: 100};
+  
+  
 }
 
 function get(item) {
